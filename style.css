@@ -1,0 +1,35 @@
+:root {
+    --header-height: 100px;
+}
+
+header {
+    background-color: #009688;
+    height: var(--header-height);
+}
+
+main {
+    position: relative;
+    background-color: #dadbd3;
+    height: calc(100vh - var(--header-height));
+}
+
+#main-container {
+    height: 526px;
+    width: 80%;
+    background-color: yellowgreen;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.col-8 {
+    background-color: chocolate;
+}
+
+.col-4-header {
+    background-color: #eaeaea;
+}
+
+
+/* Verde dei messaggi #d5f9ba */
