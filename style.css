@@ -1,16 +1,32 @@
-:root {
-    --header-height: 100px;
+.w-10 {
+    width: 10%;
 }
 
-header {
-    background-color: #009688;
-    height: var(--header-height);
+.w-15 {
+    width: 15%;
 }
 
-main {
-    position: relative;
-    background-color: #dadbd3;
-    height: calc(100vh - var(--header-height));
+.w-20 {
+    width: 20%;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top,
+            #d9dbd4 83%,
+            #d9dbd4 50%,
+            #009688 50%,
+            #009688 100%);
+    background-repeat: no-repeat;
 }
 
 #main-container {
@@ -18,18 +34,41 @@ main {
     width: 80%;
     background-color: yellowgreen;
     position: absolute;
-    top: 180px;
+    top: 280px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.col-8 {
-    background-color: chocolate;
-}
-
 .col-4-header {
     background-color: #eaeaea;
+    height: 3rem;
 }
 
+.container>.row>.col-4>.username,
+.container>.row>.col-4>.notification-banner {
+    height: 3rem;
+}
+
+.container>.row>.col-4>.notification-banner {
+    background-color: #8edafc;
+}
+
+.search-zone {
+    background-color: #f9f9f9;
+    height: 2rem;
+}
+
+.chats {
+    height: calc(100vh - 8rem);
+    overflow: auto;
+}
+
+.col-8 {
+    background-color: steelblue;
+}
+
+i {
+    color: #b1b1b1;
+}
 
 /* Verde dei messaggi #d5f9ba */
