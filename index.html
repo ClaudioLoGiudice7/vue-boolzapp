@@ -74,11 +74,11 @@
                         <img :src="'./img/avatar'+(contact.avatar)+'.jpg'" class="avatar" alt="" />
                         <p class="my-0 mx-2">
                             {{contact.name}}<br />
-                            <span class="latest-access">Ultimo accesso ore 12:00</span>
+                            <span class="latest-access">Ultimo accesso ore 17:00</span>
                         </p>
                     </div>
 
-                    <span class="latest-access">12:00</span>
+                    <span class="latest-access">17:00</span>
                 </li>
             </ul>
         </section>
@@ -91,7 +91,7 @@
                     <img :src="'./img/avatar'+(contacts[activeChat].avatar)+'.jpg'" class="avatar" alt="" />
                     <p class="my-0 mx-2">
                         {{contacts[activeChat].name}}<br />
-                        <span class="latest-access">Ultimo accesso ore 12:00</span>
+                        <span class="latest-access">Ultimo accesso ore 17:00</span>
                     </p>
                 </div>
                 <div class="d-flex align-items-center icons">
@@ -108,7 +108,7 @@
                     <p class="p-0 m-0">
                         {{ message.text }}
                     </p>
-                    <small class="message-date">15:30</small>
+                    <small class="message-date">{{ message.date }}</small>
                 </div>
             </div>
 
@@ -118,7 +118,8 @@
                     <i class="fa-regular fa-face-smile mx-2"></i>
                 </div>
                 <div class="flex-grow-1">
-                    <input type="text" placeholder="Scrivi un messaggio" class="send-message-input px-4 p-2" />
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage"
+                        @keyUp.enter="addMessage(newMessage)" class="send-message-input px-4 p-2" />
                 </div>
                 <div class="d-flex align-items-center icons px-4 py-2">
                     <i class="fa-solid fa-microphone mx-2"></i>

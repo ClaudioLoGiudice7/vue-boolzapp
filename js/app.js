@@ -47,20 +47,40 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: '15:30',
                             text: 'Hai portato a spasso il cane?',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
+                            date: '15:50',
                             text: 'Ricordati di stendere i panni',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 16:15:22',
+                            date: '16:15',
                             text: 'Tutto fatto!',
                             status: 'received'
-                        }
+                        },
+                        {
+                            date: '16:17',
+                            text: 'Ricordati di chiamare zia Immacolata e zio Ippolito. Fanno l\'anniversario di matrimonio oggi.',
+                            status: 'sent'
+                        },
+                        {
+                            date: '16:18',
+                            text: 'Ma poi iniziano a parlare e non mi mollano più...',
+                            status: 'received'
+                        },
+                        {
+                            date: '16:19',
+                            text: 'Fai un piccolo sforzo, probabilmente questa domenica andremo da loro ed è probabile che ti faranno un bel regalino... e per "regalino" intendo... €...',
+                            status: 'sent'
+                        },
+                        {
+                            date: '16:21',
+                            text: 'Perfetto! Li chiamo subito!',
+                            status: 'received'
+                        },
                     ],
                 },
                 {
@@ -69,17 +89,17 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '20/03/2020 16:30:00',
+                            date: '16:30',
                             text: 'Ciao come stai?',
                             status: 'sent'
                         },
                         {
-                            date: '20/03/2020 16:30:55',
+                            date: '16:30',
                             text: 'Bene grazie! Stasera ci vediamo?',
                             status: 'received'
                         },
                         {
-                            date: '20/03/2020 16:35:00',
+                            date: '16:35',
                             text: 'Mi piacerebbe ma devo andare a fare la spesa.',
                             status: 'sent'
                         }
@@ -91,17 +111,17 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '28/03/2020 10:10:40',
+                            date: '10:10',
                             text: 'La Marianna va in campagna',
                             status: 'received'
                         },
                         {
-                            date: '28/03/2020 10:20:10',
+                            date: '10:20',
                             text: 'Sicuro di non aver sbagliato chat?',
                             status: 'sent'
                         },
                         {
-                            date: '28/03/2020 16:15:22',
+                            date: '16:15',
                             text: 'Ah scusa!',
                             status: 'received'
                         }
@@ -113,12 +133,12 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: '15:30',
                             text: 'Lo sai che ha aperto una nuova pizzeria?',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
+                            date: '15:50',
                             text: 'Si, ma preferirei andare al cinema',
                             status: 'received'
                         }
@@ -130,12 +150,12 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: '15:30',
                             text: 'Ricordati di chiamare la nonna',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
+                            date: '15:50',
                             text: 'Va bene, stasera la sento',
                             status: 'received'
                         }
@@ -147,17 +167,17 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: '15:30',
                             text: 'Ciao Claudia, hai novità?',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
+                            date: '15:50',
                             text: 'Non ancora',
                             status: 'received'
                         },
                         {
-                            date: '10/01/2020 15:51:00',
+                            date: '15:51',
                             text: 'Nessuna nuova, buona nuova',
                             status: 'sent'
                         }
@@ -169,12 +189,12 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: '15:30',
                             text: 'Fai gli auguri a Martina che è il suo compleanno!',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
+                            date: '15:50',
                             text: 'Grazie per avermelo ricordato, le scrivo subito!',
                             status: 'received'
                         }
@@ -186,17 +206,17 @@ const app = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: '15:30',
                             text: 'Ciao, andiamo a mangiare la pizza stasera?',
                             status: 'received'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
+                            date: '15:50',
                             text: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                             status: 'sent'
                         },
                         {
-                            date: '10/01/2020 15:51:00',
+                            date: '15:51',
                             text: 'OK!!',
                             status: 'received'
                         }
@@ -204,14 +224,35 @@ const app = Vue.createApp({
                 }
             ],
 
+            // CHAT ATTIVA
             activeChat: 0,
+
+            // MESSAGGIO AGGIUNTO
+            newMessage: "",
         }
     },
 
     methods: {
         openChat(i) {
             this.activeChat = i;
+        },
+
+        addMessage(input) {
+            const newMessage = {
+                date: '17:09',
+                message: this.newMessage,
+                status: 'sent',
+
+            };
+            this.contacts[this.activeChat].messages.push(newMessage);
+            this.newMessage = "";
         }
     },
 })
 app.mount("#app");
+
+// Milestone 3
+// ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+// “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+// ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+// un “ok” come risposta, che apparirà dopo 1 secondo.
