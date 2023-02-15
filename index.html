@@ -40,16 +40,27 @@
                     <p class="my-0 mx-2">Sofia</p>
                 </div>
                 <div class="d-flex align-items-center icons">
-                    <i class="fa-solid fa-circle-notch mx-2"></i>
-                    <i class="fa-solid fa-message mx-2"></i>
-                    <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                    <a href="#">
+                        <i class="fa-solid fa-circle-notch mx-2">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-message mx-2">
+                        </i>
+                    </a>
+                    <a href="#">
+
+                        <i class="fa-solid fa-ellipsis-vertical mx-2">
+                        </i>
+                    </a>
                 </div>
             </header>
 
             <!-- DISCLAIMER CONTACTS COL -->
             <div class="disclaimer d-flex align-items-center p-2">
                 <div class="avatar">
-                    <i class="fa-solid fa-bell-slash"></i>
+                    <i class="fa-solid fa-bell-slash">
+                    </i>
                 </div>
                 <p class="my-0 mx-2">
                     Ricevi notifiche di nuovi messaggi<br />
@@ -60,7 +71,10 @@
             <!-- SEARCH CONTACTS -->
             <div class="search-contacts d-flex align-items-center p-2">
                 <div class="search-contacts--icon p-2">
-                    <i class="fa-solid fa-magnifying-glass mx-2"></i>
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass mx-2">
+                        </i>
+                    </a>
                 </div>
                 <input class="p-2" type="text" placeholder="Cerca o inizia una nuova chat" />
             </div>
@@ -74,11 +88,11 @@
                         <img :src="'./img/avatar'+(contact.avatar)+'.jpg'" class="avatar" alt="" />
                         <p class="my-0 mx-2">
                             {{contact.name}}<br />
-                            <span class="latest-access">Ultimo accesso ore 17:00</span>
+                            <span class="latest-access">Ultimo accesso ore 18:01</span>
                         </p>
                     </div>
 
-                    <span class="latest-access">17:00</span>
+                    <span class="latest-access">18:01</span>
                 </li>
             </ul>
         </section>
@@ -91,13 +105,22 @@
                     <img :src="'./img/avatar'+(contacts[activeChat].avatar)+'.jpg'" class="avatar" alt="" />
                     <p class="my-0 mx-2">
                         {{contacts[activeChat].name}}<br />
-                        <span class="latest-access">Ultimo accesso ore 17:00</span>
+                        <span class="latest-access">Ultimo accesso ore 18:01</span>
                     </p>
                 </div>
                 <div class="d-flex align-items-center icons">
-                    <i class="fa-solid fa-magnifying-glass mx-2"></i>
-                    <i class="fa-solid fa-paperclip mx-2"></i>
-                    <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass mx-2">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-paperclip mx-2">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-ellipsis-vertical mx-2">
+                        </i>
+                    </a>
                 </div>
             </header>
 
@@ -115,14 +138,20 @@
             <!-- SEND MESSAGE -->
             <footer class="send-message-bar d-flex py-3">
                 <div class="d-flex align-items-center icons px-4 py-2">
-                    <i class="fa-regular fa-face-smile mx-2"></i>
+                    <a href="#">
+                        <i class="fa-regular fa-face-smile mx-2">
+                        </i>
+                    </a>
                 </div>
                 <div class="flex-grow-1">
                     <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage"
-                        @keyUp.enter="addMessage(newMessage)" class="send-message-input px-4 p-2" />
+                        @keyUp.enter="addMessage(newMessage),replyMessage()" class="send-message-input px-4 p-2" />
                 </div>
                 <div class="d-flex align-items-center icons px-4 py-2">
-                    <i class="fa-solid fa-microphone mx-2"></i>
+                    <a href="#">
+                        <i class="fa-solid fa-microphone mx-2">
+                        </i>
+                    </a>
                 </div>
             </footer>
         </section>

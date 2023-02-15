@@ -15,7 +15,7 @@
 // ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
 // “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 // ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
-// un “ok” come risposta, che apparirà dopo 1 secondo.
+// un “ok” come risposta, che apparirà dopo 2 secondi.
 
 
 // Milestone 4
@@ -240,12 +240,23 @@ const app = Vue.createApp({
         addMessage(input) {
             const newMessage = {
                 date: '17:09',
-                message: this.newMessage,
+                text: this.newMessage,
                 status: 'sent',
 
             };
             this.contacts[this.activeChat].messages.push(newMessage);
             this.newMessage = "";
+        },
+
+        replyMessage() {
+            setTimeout(() => {
+                const replyMessage = {
+                    date: '17:11',
+                    text: 'Ok',
+                    status: 'received',
+                }
+                this.contacts[this.activeChat].messages.push(replyMessage)
+            }, 2000);
         }
     },
 })
