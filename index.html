@@ -88,15 +88,16 @@
                 <li v-for="(contact, index) in contacts" @click="openChat(index)"
                     :class="(index == activeChat) ? 'active':''" v-show="contact.visible == true"
                     class="list-contacts--contact contact--active d-flex p-2">
-                    <div class="contact--left d-flex flex-grow-1">
-                        <img :src="'./img/avatar'+(contact.avatar)+'.jpg'" class="avatar" alt="" />
-                        <p class="my-0 mx-2">
-                            {{contact.name}}<br />
-                            <span class="latest-access">Ultimo accesso ore 18:01</span>
-                        </p>
+                    <div v-show="contact.visible == true" class="position-relative">
+                        <div class="contact--left d-flex flex-grow-1">
+                            <img :src="'./img/avatar'+(contact.avatar)+'.jpg'" class="avatar" alt="" />
+                            <p class="my-0 mx-2">
+                                {{contact.name}}<br />
+                                <span class="latest-access">Ultimo accesso ore 18:01</span>
+                            </p>
+                        </div>
+                        <span class="latest-access position-absolute" id="last-text">18:01</span>
                     </div>
-
-                    <span class="latest-access">18:01</span>
                 </li>
             </ul>
         </section>
