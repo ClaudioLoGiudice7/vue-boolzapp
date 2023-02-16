@@ -22,8 +22,11 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- VUE JS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- VUE JS
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+    <!-- CDN VUE PROVVISORIA -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"></script>
 
     <!-- JAVASCRIPT -->
     <script type="text/javascript" src="./js/app.js" defer></script>
@@ -76,13 +79,14 @@
                         </i>
                     </a>
                 </div>
-                <input class="p-2" type="text" placeholder="Cerca o inizia una nuova chat" />
+                <input v-model="searchUser" @keyUp="searchName()" class="p-2" type="text"
+                    placeholder="Cerca o inizia una nuova chat" />
             </div>
 
             <!-- LIST CONTACTS -->
             <ul class="list-contacts flex-grow-1 m-0 p-0">
                 <li v-for="(contact, index) in contacts" @click="openChat(index)"
-                    :class="(index == activeChat) ? 'active':''"
+                    :class="(index == activeChat) ? 'active':''" v-show="contact.visible == true"
                     class="list-contacts--contact contact--active d-flex p-2">
                     <div class="contact--left d-flex flex-grow-1">
                         <img :src="'./img/avatar'+(contact.avatar)+'.jpg'" class="avatar" alt="" />
